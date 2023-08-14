@@ -1,0 +1,11 @@
+/target/
+/bin/
+/build/
+/.settings/
+/.classpath
+/.project
+/.factorypath
+/.apt_generated/
+/.idea
+/*.iml
+.DS_Store

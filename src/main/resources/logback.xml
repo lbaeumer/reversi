@@ -1,0 +1,25 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <withJansi>true</withJansi>
+        <encoder>
+            <pattern>[%X{u:-}] [%.3thread] %.-1level %logger{10} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- appender name="CLOUD" class="com.google.cloud.logging.logback.LoggingAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <log>application.log</log>
+        <resourceType>gae_app</resourceType>
+        <enhancer>de.quaestio24.util.MyEnhancer</enhancer>
+        <flushLevel>WARN</flushLevel>
+        <encoder>
+            <pattern>[%X{u:-}] [%.3thread] %.-1level %logger{10} - %msg%n</pattern>
+        </encoder>
+    </appender -->
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
